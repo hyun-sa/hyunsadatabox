@@ -1,5 +1,6 @@
 import pygame
 import sys
+import Ranking
 
 
 pygame.init()
@@ -53,10 +54,11 @@ while True:
     if Show_setting:
         continue
     if Show_score:
-        continue
+        Ranking.score_board(0, 0, width, height)
+        Show_score = False
     if Game_screen:
         continue
-    if Score_Board:
+    if Score_Board: # ?? 왜 만든지 모름
         continue
     if Show_help:
         continue
@@ -83,4 +85,4 @@ while True:
                 sys.exit()
 
 
-pygame.display.flip()
+    pygame.display.flip()
