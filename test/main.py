@@ -1,6 +1,8 @@
 import pygame
 import sys
 
+
+
 import testmap
 
 
@@ -58,11 +60,13 @@ while True:
     if Show_score:
         continue
     if Game_screen:
-        testmap.map(screen)
+        run=1
+        while run:
+            run=testmap.map(screen)
         Start_Screen = True
         Game_screen = False
     if Score_Board:
-        continue
+        Score_Board = False
     if Show_help:
         continue
 
@@ -80,6 +84,7 @@ while True:
             if setting_button.isOver(pos):
                 Show_setting = True
             if score_button.isOver(pos):
+                Start_Screen=False
                 Show_score = True
             if help_button.isOver(pos):
                 Show_help = True

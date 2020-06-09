@@ -17,7 +17,7 @@ class Ball(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)             #스프라이트 초기화
         self.image = pygame.transform.scale(img, area)  # 이미지의 크기를 내가 원하는 크기로 조정
         self.rect = self.image.get_rect()               # 이미지의 사각형에 해당하는 범위를 가져옴
-        self.rect.center = location                     #위치 설정
+        self.rect.topleft = location                     #위치 설정
         self.mask = pygame.mask.from_surface(self.image)#충돌감지를 위한 마스크 생성
 
         #함수내용 구현시 필요 한것
