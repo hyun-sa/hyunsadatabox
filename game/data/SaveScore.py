@@ -2,6 +2,13 @@ import fileinput
 import pygame
 import sys
 
+#############################################################################################
+# 해당 파일은 랭킹을 기록하기 위한 파일입니다. 이 파일은 키의 코드를 얻기위해 별도의 프로그램으로 사용할 수 있습니다.
+# 이 파일(SaveScore.py)의 CopyRight은
+# 2019038011 윤석현
+# 에게 있습니다.
+#############################################################################################
+# CopyRight 2019038011 윤석현
 def get_key_code():
     pygame.init()
     screen = pygame.display.set_mode((300, 200))
@@ -16,6 +23,8 @@ def get_key_code():
     pygame.quit()
     sys.exit()
 
+
+# CopyRight 2019038011 윤석현
 def get_name(screen = pygame.display.set_mode((1920, 1080))):
     height = 1920
     width = 1080
@@ -46,6 +55,7 @@ def get_name(screen = pygame.display.set_mode((1920, 1080))):
                 name = name + '%c' % event.key
 
 
+# CopyRight 2019038011 윤석현
 def save_new_score(newscore, newname):
     newscore = str(newscore)
     newname = str(newname)

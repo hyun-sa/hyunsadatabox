@@ -2,10 +2,13 @@ import pygame
 
 from game.data.obj import Magnetic, Backblock, Star, Movewall, Blckhole, Spring, Fakewall, Thorn, Ball, Wall, iccle, Laser, lever, potal, Cannon, Blink_block
 
-
-
+#############################################################################################
+# 해당 파일은 만들어진 맵을 로드하기위한 파일입니다.
+# 이 파일(LoadMap.py)의 CopyRight은
+# 2019038011 윤석현
+# 에게 있습니다.
+#############################################################################################
 def loadmap(screen, Map_name = "map.txt"):
-    print("맵 '{0}' 을(를) 로드합니다.".format(Map_name))
     try:
         f = open('game/data/maps/{0}'.format(Map_name), 'rt', encoding='UTF8')
     except:
@@ -21,8 +24,6 @@ def loadmap(screen, Map_name = "map.txt"):
     filename = filename.replace("\n", "")
     if filename == "0":
         filename = "Background.png"
-
-    print("배경 '{0}' 을(를) 로드합니다.".format(filename))
 
 
     backblock_list = pygame.sprite.Group()
