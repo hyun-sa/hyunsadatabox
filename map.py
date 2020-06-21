@@ -180,7 +180,8 @@ def Map(screen, Life, map_):#스크린을 전달받음
 
         #포탈
         for p in portal_list:
-            p.teleport(ball)
+            if p.teleport(ball):
+                portal_list.remove(p)
 
         #대포
         for c in cannon_list:

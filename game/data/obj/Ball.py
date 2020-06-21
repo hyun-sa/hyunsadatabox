@@ -127,7 +127,7 @@ class Ball(pygame.sprite.Sprite):
         except IndexError:
             return self.speed
 
-    def set_dontchangespeed(self,num):
+    def set_dontchangespeed(self):
         '''몇프레임 동안 못움직이게 하는지 체크하는 변수의 값변경'''
         self.dontchangespeed=s.FPS/6
 

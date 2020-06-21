@@ -25,7 +25,7 @@ class Magnetic(pygame.sprite.Sprite):
 
         # 벽의 옆면과 부딪혔을때
         elif (self.rect.right <= ball.get_center(0)-ball.get_speed(0) and ball.get_speed(0) < 0) or (self.rect.left > ball.get_center(0)-ball.get_speed(0) and ball.get_speed(0) > 0):
-            ball.set_dontchangespeed(10)  # 벽에 닿아서 튕겨 나올때 x축 속도를 못 바꾸게 하기위해서 사용(현재 10프레임동안 불가능)
+            ball.set_dontchangespeed()  # 벽에 닿아서 튕겨 나올때 x축 속도를 못 바꾸게 하기위해서 사용(현재 10프레임동안 불가능)
             ball.reverse_speed_x()
             # 떨어질때 닿은 것이 아니라 올라갈때 닿으면 더 올라갈 수 있도록 y축 설정 (벽타기)
             if ball.get_speed_y() <= 0:

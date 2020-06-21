@@ -33,7 +33,7 @@ class block(pygame.sprite.Sprite):
             # 속도가 10이 넘을시 사망
             if ball.get_speed(1) > 10:
                 return 1
-            ball.speed_set_y(-Ball.MAX_SPEED)
+            ball.speed_set_y(-s.MAX_SPEED)
         # wall의 좌표가 작을때 즉 더 위에 있을 경우
         elif self.rect.bottom <= ball.get_center(1) - ball.get_speed(1):
             if ball.get_speed(1) < 1:
@@ -46,7 +46,7 @@ class block(pygame.sprite.Sprite):
             ball.reverse_speed_x()
             # 떨어질때 닿은 것이 아니라 올라갈때 닿으면 더 올라갈 수 있도록 y축 설정 (벽타기)
             if ball.get_speed_y() <= 0:
-                ball.speed_set_y(-Ball.MAX_SPEED // 2)
+                ball.speed_set_y(-s.MAX_SPEED // 2)
 
         else:
             return 1

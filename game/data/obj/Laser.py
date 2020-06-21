@@ -54,7 +54,7 @@ class Layserblock(Wall.Wall):
         self.frame_counter = s.FPS*self.time  # 1이상일 경우 상태유지
         self.state = False              # True 일때 레이저 발사x False일때 발사
         self.direction=direction
-        self.shoot = self.state
+        self.shoot = self.state         #렉을 줄이기 위해 추가
 
         #레이저 생성 위치설정
         if self.direction==0:
@@ -81,7 +81,7 @@ class Layserblock(Wall.Wall):
         self.frame_counter -= 1
         if self.frame_counter <=0:
             self.state= not self.state
-            self.shoot=self.state
+            self.shoot=self.state                #렉을 줄이기 위해추가
             self.frame_counter=s.FPS*self.time
             self.layser_list.empty()
 
