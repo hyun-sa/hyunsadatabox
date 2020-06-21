@@ -1,4 +1,4 @@
-# Bouncy Dungeon Tech-alpha 0.1
+# Bouncy Dungeon Tech-alpha 0.3
 import pygame, sys, os, configparser, map, random
 from game.data import SaveScore, Rankinit
 from game.data.obj.Setting import setting as s
