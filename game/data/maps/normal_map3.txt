@@ -1,5 +1,5 @@
 1920 1080 40
-하연 백지 바탕.PNG
+default_background.png
 wall 0 0 40 0 0 0
 wall 0 40 40 0 0 0
 wall 0 80 40 0 0 0

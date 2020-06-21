@@ -64,36 +64,42 @@ setting_button = button(1770, 20, 122, 121)
 help_button = button(1680, 20, 66, 105)
 exit_button = button(1300, 880, 481, 110)
 
-
+difficulty = 0
 map_List = []
 
 
 def initialze_map():
-    map_L = []
+    map_L = [[],[],[],[]]
     for i in range(1, 9):
         txt = "easy_map"
         txt += str(i)
         txt += ".txt"
-        map_L.append(txt)
+        map_L[0].append(txt)
     for i in range(1, 8):
         txt = "normal_map"
         txt += str(i)
         txt += ".txt"
-        map_L.append(txt)
+        map_L[1].append(txt)
     for i in range(1, 5):
         txt = "hard_map"
         txt += str(i)
         txt += ".txt"
-        map_L.append(txt)
+        map_L[2].append(txt)
     for i in range(1, 4):
         txt = "hell_map"
         txt += str(i)
         txt += ".txt"
-        map_L.append(txt)
+        map_L[3].append(txt)
     return map_L
 
+
 def suffle_map(map_t, map_L):
-    map_t = map_L.pop(random.randrange(0, len(map_L)))
+    global difficulty
+    while len(map_L[difficulty]) == 0:
+        difficulty += 1
+        if difficulty == 4:
+            difficulty = 0
+    map_t = map_L[difficulty].pop(random.randrange(0, len(map_L[difficulty])))
     return map_t
 
 
@@ -130,6 +136,8 @@ def Start_Menu():
 
 
 def Game_Menu():
+    global difficulty
+    difficulty = 0
     running = 0
     Life = 4
     map_txt = ''
@@ -147,8 +155,9 @@ def Game_Menu():
             pygame.time.delay(250)
             Life -= 1
         elif running == 1:
-            if (len(map_List) == 0):
+            if len(map_List[0]) == 0 and len(map_List[1]) == 0 and len(map_List[2]) == 0 and len(map_List[3]) == 0:
                 break
+            difficulty += 1
             map_txt = suffle_map(map_txt, map_List)
             newscore += 1
         elif running == -2 or running == 1:
