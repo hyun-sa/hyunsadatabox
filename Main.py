@@ -251,6 +251,7 @@ def Setting_Menu():
         pygame.display.flip()
 
 
+# CopyRight 2019038011 윤석현
 def Score_Menu():
     running = True
     screen.blit(Score_Board, (0, 0))
