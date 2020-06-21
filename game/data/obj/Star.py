@@ -1,3 +1,4 @@
+'''구현자: 2019038026 이혁수'''
 import pygame
 
 class Star(pygame.sprite.Sprite):

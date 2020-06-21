@@ -1,4 +1,4 @@
-#2019038026_이혁수 06-14
+'''구현자: 2019038026 이혁수'''
 import pygame
 from game.data.obj.Setting import setting as s
 

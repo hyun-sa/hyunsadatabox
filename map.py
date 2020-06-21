@@ -1,4 +1,6 @@
-#2019038026_이혁수
+'''
+구현자: 2019038026 이혁수
+수정자: 조민우 김규장 윤석현현'''
 import pygame
 import LoadMap
 from game.data.obj import Magnetic, Backblock, Star, Movewall,  Spring, Fakewall, Thorn, Ball, Wall, iccle,Laser,lever,potal,Cannon

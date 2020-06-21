@@ -1,4 +1,4 @@
-#2019038026_이혁수
+'''구현자: 2019038026 이혁수'''
 import pygame
 class Thorn(pygame.sprite.Sprite):
     '''wall과 사실상 동일하진만 어떤게 추가될지 몰라 별도로 제작'''

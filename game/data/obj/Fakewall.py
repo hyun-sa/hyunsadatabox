@@ -1,4 +1,4 @@
-#2019038026이혁수
+'''구현자: 2019038026 이혁수'''
 from game.data.obj import Wall
 from game.data.obj.Setting import setting as s
 

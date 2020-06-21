@@ -1,4 +1,4 @@
-#2019038026 이혁수
+'''구현자: 2019038026 이혁수'''
 import pygame
 from game.data.obj import Ball
 from game.data.obj.Setting import setting as s

@@ -1,6 +1,7 @@
+'''구현자: 2019038026 이혁수'''
 import pygame
 from game.data.obj.Setting import setting as s
-'''텔레포트 될곳에 객체가 있을경우 겹쳐지는 오류발생'''
+
 
 class subpotal(pygame.sprite.Sprite):
     def __init__(self, img, location, area, obj,potal):  # 이미지,설치좌표(튜플로 전달),넓이와 높이를 튜플로 전달

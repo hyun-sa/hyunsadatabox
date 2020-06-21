@@ -1,3 +1,4 @@
+'''구현자: 2019038026 이혁수'''
 class set():
     def __init__(self):
         self.width=1920
