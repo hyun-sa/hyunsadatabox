@@ -1,4 +1,5 @@
 # Bouncy Dungeon Tech-alpha 0.3
+# Main coded by Minwoo
 import pygame, sys, os, configparser, map, random
 from game.data import SaveScore, Rankinit
 from game.data.obj.Setting import setting as s
@@ -257,9 +258,11 @@ def Score_Menu():
         f = open('game/data/rank.txt', 'r')
         textheight = height // 2 - 160
         textwidth = width // 2 - 450
+        cnt = 0
         while True:
+            cnt += 1
             line = f.readline()
-            if not line:
+            if not line or cnt > 10:
                 break
             name, score = line.split(' ')
             textfont = pygame.font.Font('game/data/NanumGothic.ttf', 40)
