@@ -1,5 +1,5 @@
 # Bouncy Dungeon Tech-alpha 0.3
-# Main coded by Minwoo
+# Main.py coded by 조민우
 import pygame, sys, os, configparser, map, random
 from game.data import SaveScore, Rankinit
 from game.data.obj.Setting import setting as s
